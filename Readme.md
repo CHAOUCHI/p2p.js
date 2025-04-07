@@ -112,3 +112,4 @@ Un protocole se doit d'être définie sans prendre en compte l'implementation de
 | Reception de donnée | Un pair peut recevoir des données de n'importe quel pair, ce qui provoque alors la connexion vers ce pair là.|
 | Le pairStream | Un objet qui permet de d'emettre ou recevoir des données|
 
+
