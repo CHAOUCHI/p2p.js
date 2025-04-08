@@ -87,6 +87,11 @@ function main() {
         peer.on("data", (data) => {
             console.log("data recv from peer : ", data);
         });
+        const help = `
+connect : connect to the other peer, after that just type yout message to talk to the other peer
+exit : close connection to other peer
+    `;
+        console.log("Type help for cli command");
         logger.on("line", (input) => __awaiter(this, void 0, void 0, function* () {
             switch (input) {
                 case "connect":
@@ -95,6 +100,9 @@ function main() {
                         host: "127.0.0.1"
                     }).catch(console.warn);
                     console.log("peer.isConnected", peer.isConnected);
+                    break;
+                case "help":
+                    console.log(help);
                     break;
                 case "exit":
                     peer.close();

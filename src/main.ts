@@ -105,7 +105,11 @@ async function main(){
         console.log("data recv from peer : ",data);
     });
 
-    
+    const help = `
+connect : connect to the other peer, after that just type yout message to talk to the other peer
+exit : close connection to other peer
+    `;
+    console.log("Type help for cli command");
     logger.on("line",async (input)=>{
         switch (input) {
             case "connect":
@@ -115,7 +119,9 @@ async function main(){
                 }).catch(console.warn);
                 console.log("peer.isConnected",peer.isConnected);
                 break;
-
+            case "help":
+                console.log(help);
+                break;
             case "exit":
                 peer.close();
                 break;
